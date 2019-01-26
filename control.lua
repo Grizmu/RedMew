@@ -106,3 +106,4 @@ end
 if _DUMP_ENV then
     require 'utils.dump_env'
 end
+require 'features.gui.toast'

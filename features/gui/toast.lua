@@ -132,7 +132,11 @@ Event.on_nth_tick(2, function (event)
     end
 end)
 
-Event.add(defines.events.on_player_left_game, function (event)
+Event.on_nth_tick(60, function ()
+    Debug.print(memory)
+end)
+
+Event.add(defines.events.on_land_mine_armed, function (event)
     local active_toasts = memory.active_toasts
     if size(active_toasts) == 0 then
         return
